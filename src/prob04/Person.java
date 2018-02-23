@@ -32,7 +32,7 @@ public class Person {
 	public void selfIntroduce(){
 		// "내 이름은 ...이며, 나이는 ...살입니다." 출력함
 		// 예) 내이름은 김철수이며, 나이는 19살 입니다.\
-		System.out.println("내 이름은 " + name + "이며, 나이는 " + age +"입니다.");
+		System.out.println("내 이름은 " + name + "이며, 나이는 " + age +"살입니다.");
 	}
 
 	static int getPopulation(){
