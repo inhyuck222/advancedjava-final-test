@@ -1,12 +1,8 @@
-package prob05;
+package test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import test.PasswordDismatchException;
-import test.User;
-import test.UserNotFoundException;
 
 
 public class LoginMain {
@@ -31,11 +27,11 @@ public class LoginMain {
 			login(joinUsers, newUser);
 		} catch (UserNotFoundException | PasswordDismatchException e) {
 			System.out.println("사용자를 찾을 수 없습니다.");
-			scanner.close();
 			return;
 		}
+		
 		System.out.println("로그인 성공");
-		scanner.close();
+
 	}
 	
 	public static void login(List<User> users, User user ) throws UserNotFoundException, PasswordDismatchException {

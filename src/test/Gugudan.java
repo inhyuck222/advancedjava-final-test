@@ -1,4 +1,4 @@
-package prob01;
+package test;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class Gugudan {
 	
 	static int resultNumber = 0;
 	
-	public static void main( String[] args ) {
+	public static void main( String[] args ) {		
 		int l = randomize( 1, 9 );
 		int r = randomize( 1, 9 );
 		
@@ -33,24 +33,18 @@ public class Gugudan {
 		System.out.print( "answer:" );
 
 		Scanner s = new Scanner( System.in );
-		//
-		//  이 부분에 적당한 코드를 작성합니다.  
-		//
 		
 		String answerStr = s.nextLine();
 		if(answerStr.matches("-?\\d+") == false) {
-			s.close();
 			return;
 		}
 		Integer answer = Integer.parseInt(answerStr);
 		
-		if(answer != resultNumber) {
-			System.out.println("오답");
-			s.close();
+		if(answer == resultNumber) {
+			System.out.println("정답");
 			return;
 		}
-		System.out.println("정답");
-		s.close();
+		System.out.println("오답");
 	}
 
 	private static int randomize( int lNum, int rNum ) {
@@ -72,7 +66,7 @@ public class Gugudan {
 	        
 	        boolean evaluted = false;
 	        for( int i = 0; i < occupied; i++ ) {
-	        	if( random == resultNumber || boardNumbers[i] == random ) {
+	        	if( boardNumbers[i] == random ) {
 	        		evaluted = true;
 	        		break;
 	        	}
